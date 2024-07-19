@@ -1,11 +1,32 @@
 ---
-title: "MainDocument"
-author: "Mubarak-Bladimir"
-date: "today"
-output: word_document
+title: "Psychometric Properties of PAES Math M1"
+output:
+  word_document:
+    reference_docx: C:\Users\geral\OneDrive - University of Iowa\PhD portfolio\1.-Research/Template_APA7th.docx
+bibliography: C:/Users/geral/OneDrive - University of Iowa/PhD portfolio/1.-Research/references.bib
+link-citations: true
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(include = F, message = F, eval = F)
 ```
+
+# Introduction
+With respect to its psychometric properties, what are the characteristics of the most appropriate IRT model for the PAES math M1 assessment? How comparable are information and efficiency across forms based on the most appropriate IRT model?
+# Method
+## Dataset
+## Instrument (forms and some test description)
+## Procedure
+IRT models (parameters)
+Calibration (estimation methods and concurrent calibration - equating)
+Absolute model fit assessment
+Model comparisons based on test information and reliability. Relative model fit assessment
+Forms comparison based on the best-fitting model (comparing test info and relative efficiency)
+# Results
+Comparison of model results (information, factor scores, SE)
+Comparison of forms based on Rasch and 2PL models (information, expected true scores)
+# Discussion
+# Conclusion
 
