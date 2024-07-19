@@ -1,0 +1,11 @@
+---
+title: "MainDocument"
+author: "Mubarak-Bladimir"
+date: "today"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
