@@ -14,11 +14,14 @@ knitr::opts_chunk$set(include = F, message = F, eval = F)
 ```
 
 # Introduction
+
 With respect to its psychometric properties, what are the characteristics of the most appropriate IRT model for the PAES math M1 assessment? How comparable are information and efficiency across forms based on the most appropriate IRT model?
 
 # Method
 
 ## Dataset
+
+The data correspond to the math M1 admission test
 
 ## Instrument (forms and some test description)
 
