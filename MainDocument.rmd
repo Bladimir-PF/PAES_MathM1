@@ -23,6 +23,7 @@ With respect to its psychometric properties, what are the characteristics of the
 ## Instrument (forms and some test description)
 
 ## Procedure
+This study investigated the appropriateness of the 1PL, 2PL and 3PL IRT models.
 
 IRT models (parameters)
 Calibration (estimation methods and concurrent calibration - equating)
