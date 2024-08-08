@@ -21,42 +21,47 @@ With respect to its psychometric properties, what are the characteristics of the
 
 ## Dataset
 
-The dataset used in this study was the item response data from the Mathematics Competence 1 (referred to as **M1** throughout) selection test administered in the 2024 regular admission cycle. All the information was collected, processed, and made public by the Department of Educational Evaluation, Measurement, and Registration (DEMRE by its acronym in Spanish) of the University of Chile, the institution in charge of the admission process. It contains students' correct and incorrect responses, with double marked item and omitted items treated as missing data. 
+The dataset used in this study was the item response data from the Mathematics Competence 1 (referred to as **M1** throughout) selection test administered in the 2024 regular admission cycle. All the information was collected, processed, and made public by the Department of Educational Evaluation, Measurement, and Registration (DEMRE by its acronym in Spanish) of the University of Chile, the institution in charge of the admission process. It contains students' correct and incorrect responses, with double marked item and omitted items treated as missing data.
 
 ## Instrument
 
 The M1 test measures abilities (e.g., modeling and representing data) and knowledge (e.g., in numbers, algebra, and probability) in mathematics, which are considered as foundational skills for higher education. These skills are part of the national curriculum in mathematics and are supposed to be developed during primary and secondary education.
 
-The 2024 M1 test was composed of 65 multiple-choice items, in which 60 were operational items, while the remaining 5 were pilot items and do not contribute to students score. Each item had 4 options and a single correct answer. The test had 4 equivalent forms (originally labeled as 113, 114, 115, and 116) that for convenience were referred to as forms **A**, **B**, **C**, and **D** throughout. Forms were prepared in pairs: A and C, and B and D. Each pair of forms contains the same set of items but in different order (scrabbled). Across pair of forms, 47 out of the 60 (78,5%) scored questions were common items.
+The 2024 M1 test was composed of 65 multiple-choice items, in which 60 were operational items, while the remaining 5 were pilot items and did not contribute to students score. Each item had 4 options and a single correct answer. The test had 4 equivalent forms (originally labeled as 113, 114, 115, and 116) that for convenience were referred to as forms **A**, **B**, **C**, and **D** throughout. Forms were prepared in pairs: A and C, and B and D. Each pair of forms contained the same set of items but in different order (scrabbled). Across pair of forms, 47 out of the 60 (78,5%) scored questions were common items.
 
 ## Sample
 
-The original dataset contained the responses of 243,305 students who took the M1 test in 2024. As part of the data cleaning process, cases with no responses were removed, thus the final sample include 243,294 students. Because of the focus of this study, information about students is not provided; However, a detailed description of this can be found on the DEMRE website.
+The original dataset contained the responses of 243,305 students who took the M1 test in 2024. As part of the data cleaning process, cases with no responses were removed, thus the final sample include 243,294 students. Because of the focus of this study, information about students is not provided; However, a detailed description of their relevant attributes can be found on the DEMRE website.
 
 ## Procedure
 
+Findings to answer our research questions come from analyzing the performance of different psychometric models in estimating item and student characteristics, and from comparing M1 test forms in terms of information and relative efficacy.
+
 ### IRT Models
-In order to select the most appropriate item response theory (IRT) model , we investigated the appropriateness of the 1PL, 2PL, and 3PL IRT models. Both the absolute and relative fits of the models were evaluated, leading to the selection of the most appropriate model. The 1PL, 2PL, and 3PL IRT models belong to a family of psychometric models suitable for assessing a unidimensional latent trait when items are dichotomously scored (i.e., correct or incorrect), as is the case with the PAES assessment.
 
-The three models differ based on the number of parameters being estimated. In the 1PL model, only the item difficulty parameter (b) is estimated for each item, while the discrimination parameter (a) is constant across items. The 2PL model includes an additional item discrimination parameter (a) estimated for each item. The 3PL model further includes a guessing parameter (c) estimated for each item. The mathematical form of the 3PL model is:
+In order to select the most appropriate item response theory (IRT) model, we fitted and revised the widely known **1PL**, **2PL**, and **3PL** IRT models [@de2013theory] These models belong to a larger family of psychometric models suitable for assessing unidimensional latent traits when items are dichotomously scored (i.e., correct or incorrect answers), as is the case with the M1 test.
+
+The three models differ in the number of parameters being estimated for each item, which are expressions of the difficulty (**a** parameter), discrimination (**b** parameter), and guessing (**c** parameter) attributable to the item -these are characteristics of the items independent of the student characteristics-. In the 1PL model, only the **b** parameter is estimated for each item, while the **a** parameter is constrained to be constant across items. The 2PL model estimates the **a** and **b** parameters for each item. The 3PL also estimates the **c** parameter for each item.
+
+The mathematical form of the 3PL model is:
 
 $$
-P(X_i = 1|\theta) = c_i + (1 - c_i) \frac{exp{(a_i(\theta - b_i))}}{1 + exp{(a_i(\theta - b_i))}}
-$$
+P(X_i = 1|\theta_s) = c_i + (1 - c_i) \frac{exp{(a_i(\theta_s - b_i))}}{1 + exp{(a_i(\theta_s - b_i))}}
+$$ Equation 1
 
 where:\
-- \( P(X_i = 1|\theta) \) is the probability of a correct response by a person with ability level \( \theta \)\
-- \( a_i \) is the discrimination parameter for item \( i \)\
-- \( b_i \) is the difficulty parameter for item \( i \)\
-- \( c_i \) is the guessing parameter for item \( i \)\
+- \( P(X_i = 1|\theta_s) \) is the probability of a correct response for item **i** conditional on the latent ability of student **s** \( \theta_s\),\
+- \( a_i \) is the discrimination parameter for item \( i \),\
+- \( b_i \) is the difficulty parameter for item \( i \),\
+- \( c_i \) is the guessing parameter for item \( i \).\
 
-The 2PL model can be derived from the equation above by setting the guessing parameter (\( c_i \)) to zero, and the 1PL can be derived from the 2PL by setting the discrimination parameter (\( a_i \)) to a constant.
+The 2PL model can be derived from Equation 1 by setting the guessing parameter (\( c_i \)) to zero, and the 1PL model can be derived from the 2PL model by setting the discrimination parameter (\( a_i \)) to a constant that is estimated from a reference item.
 
-The discrimination (\( a_i \)) parameter indicates how effectively an item distinguishes between individuals with varying levels of ability. Items with high discrimination provide valuable insights into differences in ability level across individuals.
+The discrimination (\( a_i \)) parameter indicates how effectively an item distinguishes between individuals with varying levels of ability. Items with high discrimination values provide valuable insights into differences in ability level across individuals.
 
-The difficulty parameter (\( b_i \)) denotes the point on the ability scale where the probability of a correct response equals 0.5 for the 1PL and 2PL models. For the 3PL model, it denotes the point where the probability of a correct response is halfway between the guessing parameter (\( c_i \)) and 1. (i.e $P(X_i = 1|\theta) = \frac{1+c_i}{2}$).
+The difficulty parameter (\( b_i \)) denotes the point on the ability scale where the probability of a correct response for the item equals 0.5, at least in the 1PL and 2PL models. For the 3PL model, it denotes the point where the probability of a correct response is halfway between the guessing parameter (\( c_i \)) and 1 (i.e $P(X_i = 1|\theta) = \frac{1+c_i}{2}$).
 
-The guessing parameter (\( b_i \)) represents the probability of providing a correct response regardless of an individual's ability. 
+The guessing parameter (\( c_i \)) represents the probability of providing a correct response regardless of an individual's ability. It is related to the options available for each question. For instance, in any of the M1 test questions, students have 25% chance (1/4) of a correct answer just by chance.
 
 
 IRT models (parameters)
