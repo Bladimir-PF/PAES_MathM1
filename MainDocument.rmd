@@ -35,6 +35,7 @@ The original dataset contained the responses of 243,305 students who took the M1
 
 ## Procedure
 
+
 ### IRT Models
 In order to select the most appropriate item response theory (IRT) model , we investigated the appropriateness of the 1PL, 2PL, and 3PL IRT models. Both the absolute and relative fits of the models were evaluated, leading to the selection of the most appropriate model. The 1PL, 2PL, and 3PL IRT models belong to a family of psychometric models suitable for assessing a unidimensional latent trait when items are dichotomously scored (i.e., correct or incorrect), as is the case with the PAES assessment.
 
@@ -56,10 +57,19 @@ The discrimination (\( a_i \)) parameter indicates how effectively an item disti
 
 The difficulty parameter (\( b_i \)) denotes the point on the ability scale where the probability of a correct response equals 0.5 for the 1PL and 2PL models. For the 3PL model, it denotes the point where the probability of a correct response is halfway between the guessing parameter (\( c_i \)) and 1. (i.e $P(X_i = 1|\theta) = \frac{1+c_i}{2}$).
 
-The guessing parameter (\( b_i \)) represents the probability of providing a correct response regardless of an individual's ability. 
+The guessing parameter (\( c_i \)) represents the probability of providing a correct response regardless of an individual's ability. 
 
 
-IRT models (parameters)
+## Calibration
+
+Test calibration in IRT involves obtaining the numeric values of item parameters for each of the models defined above [@baker2004item]. When dealing with a single test form, obtaining item parameter estimates is straightforward and can be achieved using many statistical software programs. However, when multiple test forms are considered, decisions must be made about the calibration approach to ensure item parameters across forms are on the same scale. This process is known as linking.
+
+Depending on the data collection approach and sample characteristics, we can choose one of three commonly used IRT linking methods: separate calibration, concurrent calibration, and fixed calibration [@lee2018irt]. Given that students were randomly assigned to each form of the M1 test, this data collection approach aligns with the specifications of a random groups design. Therefore, we choose the concurrent calibration approach to obtain item parameter estimates across forms, allowing us to obtain parameters for both common items and form-specific items.
+
+In more detail, the concurrent calibration process combines all item response data across forms into a single dataset for parameter estimation in one computer run. Items that are unique to a particular form are treated as missing in the other forms. For this calibration approach, the marginal maximum likelihood estimation with the expectation-maximization algorithm was employed, as implemented in the mirt R package [@chalmersmirt], which was used for all model estimations.   
+
+## Model fit
+
 Calibration (estimation methods and concurrent calibration - equating)
 Absolute model fit assessment
 Model comparisons based on test information and reliability. Relative model fit assessment
