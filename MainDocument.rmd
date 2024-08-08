@@ -21,22 +21,20 @@ With respect to its psychometric properties, what are the characteristics of the
 
 ## Dataset
 
-The data correspond to the student answers in the Mathematics Competence 1 (referred to as **M1** throughout) selection test applied in the 2024 regular admission process. All the information was collected, processed, and made public by the Department of Educational Evaluation, Measurement, and Registration (DEMRE by its acronym in Spanish) of the University of Chile, the institution in charge of the admission process.
-
-The responses were organized in wide format according to the student ID. Importantly, double marks and omitted questions were treated as missing data, given that they are not synonym of wrong answers and we just analyzed correct and incorrect responses.
+The dataset used in this study was the item response data from the Mathematics Competence 1 (referred to as **M1** throughout) selection test administered in the 2024 regular admission cycle. All the information was collected, processed, and made public by the Department of Educational Evaluation, Measurement, and Registration (DEMRE by its acronym in Spanish) of the University of Chile, the institution in charge of the admission process. It contains students' correct and incorrect responses, with double marked item and omitted items treated as missing data. 
 
 ## Instrument
 
-The M1 test measures abilities (e.g., modeling and representing data) and knowledge (e.g., in numbers, algebra, and probability) in mathematics, which are considered necessary for students to solve diverse problems in day-to-day life. These abilities and knowledge are part of the national curriculum in mathematics and are supposed to be developed during primary and secondary education.
+The M1 test measures abilities (e.g., modeling and representing data) and knowledge (e.g., in numbers, algebra, and probability) in mathematics, which are considered as foundational skills for higher education. These skills are part of the national curriculum in mathematics and are supposed to be developed during primary and secondary education.
 
-The 2024 M1 test was composed of 65 multiple-choice questions, in which 60 were used to calculate scores and 5 were pilot questions. Each question had 4 options and a single answer. The test had 4 equivalent forms (originally labeled as 113, 114, 115, and 116) that for convenience were referred to as forms **A**, **B**, **C**, and **D** throughout. Forms were prepared in pairs: A and C, and B and D. Each pair of forms had the same questions randomly ordered. Across forms, 47 out of the 60 (78,5%) scored questions were the same.
+The 2024 M1 test was composed of 65 multiple-choice items, in which 60 were operational items, while the remaining 5 were pilot items and do not contribute to students score. Each item had 4 options and a single correct answer. The test had 4 equivalent forms (originally labeled as 113, 114, 115, and 116) that for convenience were referred to as forms **A**, **B**, **C**, and **D** throughout. Forms were prepared in pairs: A and C, and B and D. Each pair of forms contains the same set of items but in different order (scrabbled). Across pair of forms, 47 out of the 60 (78,5%) scored questions were common items.
 
 ## Sample
 
-The original dataset contained the responses of 243,305 students who took the M1 test in 2024. After revising the data, cases with no responses were removed, thus the sample slightly decreased to 243,294 students. Because of the focus of this study, information about students is not provided; However, a detailed description of this can be found on the DEMRE website.
+The original dataset contained the responses of 243,305 students who took the M1 test in 2024. As part of the data cleaning process, cases with no responses were removed, thus the final sample include 243,294 students. Because of the focus of this study, information about students is not provided; However, a detailed description of this can be found on the DEMRE website.
 
 ## Procedure
-<<<<<<< HEAD
+
 ### IRT Models
 In order to select the most appropriate item response theory (IRT) model , we investigated the appropriateness of the 1PL, 2PL, and 3PL IRT models. Both the absolute and relative fits of the models were evaluated, leading to the selection of the most appropriate model. The 1PL, 2PL, and 3PL IRT models belong to a family of psychometric models suitable for assessing a unidimensional latent trait when items are dichotomously scored (i.e., correct or incorrect), as is the case with the PAES assessment.
 
