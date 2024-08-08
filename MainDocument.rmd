@@ -26,7 +26,28 @@ The data correspond to the math M1 admission test
 ## Instrument (forms and some test description)
 
 ## Procedure
-This study investigated the appropriateness of the 1PL, 2PL and 3PL IRT models.
+### IRT Models
+In order to select the most appropriate item response theory (IRT) model , we investigated the appropriateness of the 1PL, 2PL, and 3PL IRT models. Both the absolute and relative fits of the models were evaluated, leading to the selection of the most appropriate model. The 1PL, 2PL, and 3PL IRT models belong to a family of psychometric models suitable for assessing a unidimensional latent trait when items are dichotomously scored (i.e., correct or incorrect), as is the case with the PAES assessment.
+
+The three models differ based on the number of parameters being estimated. In the 1PL model, only the item difficulty parameter (b) is estimated for each item, while the discrimination parameter (a) is constant across items. The 2PL model includes an additional item discrimination parameter (a) estimated for each item. The 3PL model further includes a guessing parameter (c) estimated for each item. The mathematical form of the 3PL model is:
+
+$$
+P(X_i = 1|\theta) = c_i + (1 - c_i) \frac{exp{(a_i(\theta - b_i))}}{1 + exp{(a_i(\theta - b_i))}}
+$$
+
+where:
+- \( P(X_i = 1|\theta) \) is the probability of a correct response by a person with ability level \( \theta \)
+- \( a_i \) is the discrimination parameter for item \( i \)
+- \( b_i \) is the difficulty parameter for item \( i \)
+- \( c_i \) is the guessing parameter for item \( i \)
+
+The 2PL model can be derived from the equation above by setting the guessing parameter (\( c_i \)) to zero, and the 1PL can be derived from the 2PL by setting the discrimination parameter (\( a_i \)) to a constant.
+
+The discrimination (\( a_i \)) parameter indicates how effectively an item distinguishes between individuals with varying levels of ability. Items with high discrimination provide valuable insights into differences in ability level across individuals.
+
+The difficulty parameter (\( b_i \)) denotes the point on the ability scale where the probability of a correct response equals 0.5 for the 1PL and 2PL models. For the 3PL model, it denotes the point where the probability of a correct response is halfway between the guessing parameter (\( c_i \)) and 1. (i.e $$ P(X_i = 1|\theta) = \frac{1+c_i}{2} $$).
+
+The guessing parameter (\( b_i \)) represents the probability of providing a correct response regardless of an individual's ability. 
 
 IRT models (parameters)
 Calibration (estimation methods and concurrent calibration - equating)
