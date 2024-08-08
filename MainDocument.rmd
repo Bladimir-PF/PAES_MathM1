@@ -62,7 +62,7 @@ The discrimination (\( a_i \)) parameter indicates how effectively an item disti
 The difficulty parameter (\( b_i \)) denotes the point on the ability scale where the probability of a correct response for the item equals 0.5, at least in the 1PL and 2PL models. For the 3PL model, it denotes the point where the probability of a correct response is halfway between the guessing parameter (\( c_i \)) and 1 (i.e $P(X_i = 1|\theta) = \frac{1+c_i}{2}$).
 
 
-The guessing parameter (\( c_i \)) represents the probability of providing a correct response regardless of an individual's ability. It is related to the options available for each question. For instance, in any of the M1 test questions, students have 25% chance (1/4) of a correct answer just by chance.
+The guessing parameter (\( c_i \)) represents the probability of providing a correct response regardless of an individual's ability. It is related to the options available for each question. Naturally, in any of the M1 test questions, students have 25% chance (1/4) of a correct answer just by chance given that the test items had four response options. However, empirical estimates have shown that (\( c_i \)) values are usually less than $\frac{1}{C}$, where \( c \) is the number of response options [@van2016unidimensional].
 
 ## Calibration
 
