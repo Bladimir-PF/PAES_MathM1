@@ -21,11 +21,22 @@ With respect to its psychometric properties, what are the characteristics of the
 
 ## Dataset
 
-The data correspond to the math M1 admission test
+The data correspond to the student answers in the Mathematics Competence 1 (referred to as **M1** throughout) selection test applied in the 2024 regular admission process. All the information was collected, processed, and made public by the Department of Educational Evaluation, Measurement, and Registration (DEMRE by its acronym in Spanish) of the University of Chile, the institution in charge of the admission process.
 
-## Instrument (forms and some test description)
+The responses were organized in wide format according to the student ID. Importantly, double marks and omitted questions were treated as missing data, given that they are not synonym of wrong answers and we just analyzed correct and incorrect responses.
+
+## Instrument
+
+The M1 test measures abilities (e.g., modeling and representing data) and knowledge (e.g., in numbers, algebra, and probability) in mathematics, which are considered necessary for students to solve diverse problems in day-to-day life. These abilities and knowledge are part of the national curriculum in mathematics and are supposed to be developed during primary and secondary education.
+
+The 2024 M1 test was composed of 65 multiple-choice questions, in which 60 were used to calculate scores and 5 were pilot questions. Each question had 4 options and a single answer. The test had 4 equivalent forms (originally labeled as 113, 114, 115, and 116) that for convenience were referred to as forms **A**, **B**, **C**, and **D** throughout. Forms were prepared in pairs: A and C, and B and D. Each pair of forms had the same questions randomly ordered. Across forms, 47 out of the 60 (78,5%) scored questions were the same.
+
+## Sample
+
+The original dataset contained the responses of 243,305 students who took the M1 test in 2024. After revising the data, cases with no responses were removed, thus the sample slightly decreased to 243,294 students. Because of the focus of this study, information about students is not provided; However, a detailed description of this can be found on the DEMRE website.
 
 ## Procedure
+<<<<<<< HEAD
 ### IRT Models
 In order to select the most appropriate item response theory (IRT) model , we investigated the appropriateness of the 1PL, 2PL, and 3PL IRT models. Both the absolute and relative fits of the models were evaluated, leading to the selection of the most appropriate model. The 1PL, 2PL, and 3PL IRT models belong to a family of psychometric models suitable for assessing a unidimensional latent trait when items are dichotomously scored (i.e., correct or incorrect), as is the case with the PAES assessment.
 
@@ -48,6 +59,10 @@ The discrimination (\( a_i \)) parameter indicates how effectively an item disti
 The difficulty parameter (\( b_i \)) denotes the point on the ability scale where the probability of a correct response equals 0.5 for the 1PL and 2PL models. For the 3PL model, it denotes the point where the probability of a correct response is halfway between the guessing parameter (\( c_i \)) and 1. (i.e $$ P(X_i = 1|\theta) = \frac{1+c_i}{2} $$).
 
 The guessing parameter (\( b_i \)) represents the probability of providing a correct response regardless of an individual's ability. 
+=======
+
+This study investigated the appropriateness of the 1PL, 2PL and 3PL IRT models.
+>>>>>>> ce7fac6ef1ff92900f2c90894236eb435432c3a9
 
 IRT models (parameters)
 Calibration (estimation methods and concurrent calibration - equating)
