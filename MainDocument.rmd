@@ -37,7 +37,7 @@ The original dataset contained the responses of 243,305 students who took the M1
 
 Findings to answer our research questions come from analyzing the performance of different psychometric models in estimating item and student characteristics, and from comparing M1 test forms in terms of information and relative efficacy.
 
-### IRT Models
+## IRT Models
 
 In order to select the most appropriate item response theory (IRT) model, we fitted and revised the widely known **1PL**, **2PL**, and **3PL** IRT models [@de2013theory] These models belong to a larger family of psychometric models suitable for assessing unidimensional latent traits when items are dichotomously scored (i.e., correct or incorrect answers), as is the case with the M1 test.
 
