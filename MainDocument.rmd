@@ -73,7 +73,6 @@ The discrimination (\( a_i \)) parameter indicates how effectively an item disti
 
 The difficulty parameter (\( b_i \)) denotes the point on the ability scale where the probability of a correct response for the item equals 0.5, at least in the 1PL and 2PL models. For the 3PL model, it denotes the point where the probability of a correct response is halfway between the guessing parameter (\( c_i \)) and 1 (i.e $P(X_i = 1|\theta) = \frac{1+c_i}{2}$).
 
-
 The guessing parameter (\( c_i \)) represents the probability of providing a correct response regardless of an individual's ability. It is related to the options available for each question. Naturally, in any of the M1 test questions, students have 25% chance (1/4) of a correct answer just by chance given that the test items had four response options. However, empirical estimates have shown that (\( c_i \)) values are usually less than $\frac{1}{C}$, where \( c \) is the number of response options [@van2016unidimensional].
 
 ## Calibration
@@ -90,14 +89,13 @@ To assess the fit of the IRT models to the observed response data, we examined b
 
 Absolute model fit was assessed using the **M2** statistic [@maydeu2005limited], a limited-information model fit statistic that evaluate the fit between the first and second order marginal residuals of the IRT models. Under the null hypothesis (i.e., the model is exactly true in the population,) this statistic is asymptotically chi-square distributed. However, under the alternative hypothesis (i.e., lack of fit), it has a non-central chi-square distribution when N is large [@cai2023incremental]. For this test, we conclude that the model adequately fits the data when the corresponding **p**-value was > 0.05.
 
-Relative model fit was assessed using likelihood ratio tests (−2ΔLL). This is a statistical significance test that is appropriate for comparing nested models, as the case is for the 1PL, 2PL and 3PL models. The −2ΔLL test consists of subtracting the maximized log-likelihood of the more complex model from that of the simpler model, multiplying such difference by -2 and comparing it to a $χ^2$ distribution with degrees of freedom equal to the difference in parameters between models to determine its significance. For instance, after checking that the 3PL and 2PL models demonstrate adequate absolute fit, we can employ the −2ΔLL test to evaluate whether constraining some parameters in the 2PL model fits the data better than estimating additional parameters in the 3PL model.
-
-In order to appropriately compare the 2PL and 3PL models, we followed the alternative approach outlined by @brown2015comparing. This involves conducting an item-level model comparison, comparing a model where the 2PL is specified for all items to models where the 3PL is specified for one item at a time. This approach results in as many LR tests as there are items in the test, leading to a final model where some items follow a 2PL model while others follow a 3PL model.
+Relative model fit was assessed using likelihood ratio tests (−2ΔLL). This is a statistical significance test to compare nested models, as the case is for the 1PL, 2PL and 3PL models. The −2ΔLL test consists of subtracting the maximized log-likelihood of the more complex model from that of the simpler model, multiplying such difference by -2 and comparing it to a $χ^2$ distribution with degrees of freedom equal to the difference in parameters between models to determine its significance. For instance, after checking that the 3PL and 2PL models demonstrate adequate absolute fit, we can use the −2ΔLL test to evaluate whether constraining some item parameters in the 2PL model fits the data better than estimating additional item parameters in the 3PL model.
 
 ## Information and Standard error
-Item and test information, along with standard errors, are additional metrics for evaluating the performance of an item or test in meeting assessment goals. The item/test information represents the precision with which ability is estimated across the ability continuum. The more information we have in estimating an ability, the less error we have in that ability estimate. Computationally, the standard error of the ability estimate is the reciprocal of the square root of the information [@baker2017basics].
 
-Given that information is highest only at specific point on the ability continuum, we examined test information across the IRT models to ensure that the selected model is peaked around the target ability level for the M1 test. Typically, the point where information is peaked will coincide with the point where the standard error is lowest. 
+Item and test information, along with standard errors, are additional metrics for evaluating the performance of an item or test in meeting assessment goals. The item/test information represents the precision with which ability is estimated across the ability continuum. The more information we have in estimating ability at certain point, let's say between 0 and 1, the less error we have in that range of ability. Computationally, the standard error of the ability estimate is the reciprocal of the square root of the information [@baker2017basics]. Thus, the point (in terms of ability) at which information reaches its maximum usually coincides with the point at which the standard error is lowest.
+
+Test information was examined across the IRT models to ensure that the selected model is peaked around the target ability level for the M1 test. 
 
 # Results
 
@@ -108,4 +106,9 @@ Comparison of forms based on Rasch and 2PL models (information, expected true sc
 
 # Conclusion
 
+# Things to move
+
 The LR test for comparing the 1PL and 2PL models is more straightforward than comparing the 2PL with the 3PL model. When comparing the 1PL and 2PL models, we test the null hypothesis that all discrimination parameters are equal to the estimated discrimination value against an alternative hypothesis that at least one discrimination parameter differs from this value. This type of comparison in LR is typical and can be easily tested with the anova function in the mirt R package, as the $\chi^2$ reference distribution holds. However, when comparing the 2PL and 3PL models, the null hypothesis states that the guessing parameter is equal to zero for all items, against an alternative hypothesis that at least one guessing parameter is not equal to zero. This null hypothesis places the guessing parameters at their boundary, and the $\chi^2$ reference distribution no longer holds [@brown2015comparing].
+
+
+Comparing the 2PL model to the 1PL model was straightforward. In order to appropriately compare the 2PL and 3PL models, we followed the alternative approach outlined by @brown2015comparing. This involves conducting an item-level model comparison, comparing a model where the 2PL is specified for all items to models where the 3PL is specified for one item at a time. This approach results in as many LR tests as there are items in the test, leading to a final model where some items follow a 2PL model while others follow a 3PL model.
