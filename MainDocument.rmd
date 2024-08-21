@@ -95,11 +95,9 @@ Relative model fit was assessed using likelihood ratio tests (−2ΔLL). This is
 In order to appropriately compare the 2PL and 3PL models, we followed the alternative approach outlined by @brown2015comparing. This involves conducting an item-level model comparison, comparing a model where the 2PL is specified for all items to models where the 3PL is specified for one item at a time. This approach results in as many LR tests as there are items in the test, leading to a final model where some items follow a 2PL model while others follow a 3PL model.
 
 ## Information and Standard error
-Information and Standard errors are additional metrics for evaluating the performance of an IRT model based on an assessment goal. an item information 
+Item and test information, along with standard errors, are additional metrics for evaluating the performance of an item or test in meeting assessment goals. The item/test information represents the precision with which ability is estimated across the ability continuum. The more information we have in estimating an ability, the less error we have in that ability estimate. Computationally, the standard error of the ability estimate is the reciprocal of the square root of the information [@baker2017basics].
 
-Absolute model fit assessment
-Model comparisons based on test information and reliability. Relative model fit assessment
-Forms comparison based on the best-fitting model (comparing test info and relative efficiency)
+Given that information is highest only at specific point on the ability continuum, we examined test information across the IRT models to ensure that the selected model is peaked around the target ability level for the M1 test. Typically, the point where information is peaked will coincide with the point where the standard error is lowest. 
 
 # Results
 
