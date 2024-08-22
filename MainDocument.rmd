@@ -19,21 +19,24 @@ The regular admission process to higher education in Chile is a significant annu
 
 Since its inception in 2004, the mathematics test has played a pivotal role in the admission process for students interested in STEM, health sciences, and law programs. This is particularly true for those aspiring to study in prestigious, highly selective universities. The test's importance has drawn the attention of researchers and stakeholders, who question its validity and argue that it may inadvertently favor certain students in the admission process.
 
-The mathematics test has been largely criticized for the correlation between its scores and the socioeconomic characteristics of the students and their schools. Different research findings have shown that students tend to achieve higher scores in math as their families have more educational and financial resources and when they graduate from private schools. In addition, as the selection test was intended to measure knowledge of the contents of the mathematics curriculum, students in schools able to cover most of the curriculum and those able to pay for additional teaching during or after secondary school had higher chances of achieving high scores in mathematics.
+The mathematics test has been largely criticized for the correlation between its scores and the socioeconomic characteristics of the students and their schools. Different research findings have shown that students tend to achieve higher scores in math when their families have more educational and financial resources and when they attend private schools. Furthermore, since the selection test was designed to measure knowledge of the mathematics curriculum content, students had higher chances of achieving high scores if they attended schools able to cover most of the curriculum or had access to additional mathematics instruction. This additional instruction often took the form of paid tutoring during or after secondary school, giving an advantage to students whose families could afford such resources.
 
-The criticism of the mathematics test has not gone unnoticed. It has prompted DEMRE, the institution responsible for designing, applying, and analyzing the selection tests, to make continuous adjustments over the years to improve its technical properties and objectivity. Though not fully addressing the public's concerns yet, these adjustments prove that DEMRE is listening to those unsatisfied with the selection tests or the admission process.
+DEMRE, the institution responsible for designing, administering, and analyzing the selection tests, has not ignored the criticism of the mathematics test. Over the years, they have made continuous adjustments to improve its technical properties and objectivity. While these changes have not yet fully addressed all public concerns, they demonstrate DEMRE's responsiveness to those dissatisfied with the selection tests or the admission process.
 
-In 2020, after some protests from students in different schools across the country because of the application of the selection tests and the leakage of a form used in the history selection test, DEMRE announced a substantial change in the selection tests. From then on, the tests would evaluate the student’s competencies in the measured subjects, which means that the questions would measure the ability of the student to resolve tasks based on the knowledge acquired during secondary education.
+In 2020, DEMRE announced a substantial change in the selection tests following student protests across the country. These protests were sparked by concerns about the administration of the tests and the leakage of a form used in the history selection test. From that point forward, DEMRE declared that the tests would evaluate students' competencies in the measured subjects. This shift meant that questions would assess students' ability to solve tasks based on knowledge acquired during secondary education.
 
-Following DEMRE’s announcement, the well-known PSU (university selection tests) were replaced by the PDT (transition tests) in the 2021 and 2022 admission processes. In 2023, the new tests, PAES (higher education entrance tests), were applied for the first time. The PAES were the DEMRE’s response to the petitions for more equitable and fair selection tests. In this scenario, the mathematics test was divided into two tests: the PAES Mathematics Competencies 1 (M1), focused on general knowledge of mathematics required for higher education studies, and the PAES Mathematics Competencies 2 (M2), an advanced and more specific test for students interested in math-oriented programs.
+Following DEMRE's announcement, the well-known PSU (Prueba de Selección Universitaria or University Selection Tests) were replaced by the PDT (Prueba de Transición or Transition Tests) for the 2021 and 2022 admission processes. In 2023, the new PAES (Prueba de Acceso a la Educación Superior or Higher Education Entrance Tests) were implemented for the first time. The PAES were DEMRE's response to calls for more equitable and fair selection tests. As part of this change, the mathematics test was divided into two separate assessments. The PAES Mathematics Competencies 1 (M1) focuses on general mathematical knowledge required for higher education studies, while the PAES Mathematics Competencies 2 (M2) is an advanced, more specific test designed for students interested in math-oriented programs.
 
-Like the previous mathematics tests, the M1 test is mandatory for students, and its properties and results deserve attention. This paper analyzes the M1 applied in the 2024 admission process from a psychometric perspective, i.e., fitting and evaluating different models from the Item Response Theory (IRT) framework to evaluate its appropriateness for measuring what is intended to. This study aims to provide evidence about the psychometric qualities of the M1 test, which may help judge the validity of its scores and whether its results can be linked to how it was designed. In this sense, the research questions were two: what are the characteristics of the IRT model that fit the best to the M1 test data? How comparable are the information and efficiency of the forms used in the application of the M1 test according to different IRT models?
+Like its predecessors, the M1 test is mandatory for students, and its properties and results warrant careful examination. This paper analyzes the M1 test applied in the 2024 admission process from a psychometric perspective, specifically by fitting and evaluating different models within the Item Response Theory (IRT) framework to assess its effectiveness in measuring intended outcomes. The study aims to provide evidence about the psychometric qualities of the M1 test, which may help evaluate the validity of its scores and determine whether its results align with its design intentions. To this end, the research addresses two primary questions:
+
+1.  What are the characteristics of the IRT model that best fits the M1 test data?
+2.  How comparable are the information and efficiency of the different forms used in administering the M1 test according to various IRT models?
 
 # Method
 
 ## Dataset
 
-The dataset used in this study was the item response data from the  **M1** test administered in the 2024 regular admission process. All the information was collected, processed, and made public by the Department of Educational Evaluation, Measurement, and Registration (DEMRE) of the University of Chile, the institution in charge of the admission process. It contains students' correct and incorrect responses, with double marked item and omitted items treated as missing data.
+The dataset used in this study was the item response data from the **M1** test administered in the 2024 regular admission process. All the information was collected, processed, and made public by the Department of Educational Evaluation, Measurement, and Registration (DEMRE) of the University of Chile, the institution in charge of the admission process. It contains students' correct and incorrect responses, with double marked item and omitted items treated as missing data.
 
 ## Instrument
 
@@ -62,18 +65,18 @@ P(X_i = 1|\theta_s) = c_i + (1 - c_i) \frac{exp{(a_i(\theta_s - b_i))}}{1 + exp{
 $$ Equation 1
 
 where:\
-- \( P(X_i = 1|\theta_s) \) is the probability of a correct response for item **i** conditional on the latent ability of student **s** \( \theta_s\),\
-- \( a_i \) is the discrimination parameter for item \( i \),\
-- \( b_i \) is the difficulty parameter for item \( i \),\
-- \( c_i \) is the guessing parameter for item \( i \).\
+- $P(X_i = 1|\theta_s)$ is the probability of a correct response for item **i** conditional on the latent ability of student **s** $\theta_s$,\
+- $a_i$ is the discrimination parameter for item $i$,\
+- $b_i$ is the difficulty parameter for item $i$,\
+- $c_i$ is the guessing parameter for item $i$.\
 
-The 2PL model can be derived from Equation 1 by setting the guessing parameter (\( c_i \)) to zero, and the 1PL model can be derived from the 2PL model by setting the discrimination parameter (\( a_i \)) to a constant that is estimated from a reference item.
+The 2PL model can be derived from Equation 1 by setting the guessing parameter ($c_i$) to zero, and the 1PL model can be derived from the 2PL model by setting the discrimination parameter ($a_i$) to a constant that is estimated from a reference item.
 
-The discrimination (\( a_i \)) parameter indicates how effectively an item distinguishes between individuals with varying levels of ability. Items with high discrimination values provide valuable insights into differences in ability level across individuals.
+The discrimination ($a_i$) parameter indicates how effectively an item distinguishes between individuals with varying levels of ability. Items with high discrimination values provide valuable insights into differences in ability level across individuals.
 
-The difficulty parameter (\( b_i \)) denotes the point on the ability scale where the probability of a correct response for the item equals 0.5, at least in the 1PL and 2PL models. For the 3PL model, it denotes the point where the probability of a correct response is halfway between the guessing parameter (\( c_i \)) and 1 (i.e $P(X_i = 1|\theta) = \frac{1+c_i}{2}$).
+The difficulty parameter ($b_i$) denotes the point on the ability scale where the probability of a correct response for the item equals 0.5, at least in the 1PL and 2PL models. For the 3PL model, it denotes the point where the probability of a correct response is halfway between the guessing parameter ($c_i$) and 1 (i.e $P(X_i = 1|\theta) = \frac{1+c_i}{2}$).
 
-The guessing parameter (\( c_i \)) represents the probability of providing a correct response regardless of an individual's ability. It is related to the options available for each question. Naturally, in any of the M1 test questions, students have 25% chance (1/4) of a correct answer just by chance given that the test items had four response options. However, empirical estimates have shown that (\( c_i \)) values are usually less than $\frac{1}{C}$, where \( c \) is the number of response options [@van2016unidimensional].
+The guessing parameter ($c_i$) represents the probability of providing a correct response regardless of an individual's ability. It is related to the options available for each question. Naturally, in any of the M1 test questions, students have 25% chance (1/4) of a correct answer just by chance given that the test items had four response options. However, empirical estimates have shown that ($c_i$) values are usually less than $\frac{1}{C}$, where $c$ is the number of response options [@van2016unidimensional].
 
 ## Calibration
 
@@ -87,7 +90,7 @@ Item parameters calibration was performed using the marginal maximum likelihood 
 
 To assess the fit of the IRT models to the observed response data, we examined both absolute and relative model fit. Absolute model fit evaluates how well a model's predicted responses match the actual observed responses. In contrast, relative model fit involves comparing models to determine which one provides the most efficient and accurate representation of the dataset. Absolute fit focuses on the alignment between predicted and observed responses for a single model, whereas relative fit focuses on identifying the most suitable model among competing models.
 
-Absolute model fit was assessed using the **M2** statistic [@maydeu2005limited], a limited-information model fit statistic that evaluate the fit between the first and second order marginal residuals of the IRT models. Under the null hypothesis (i.e., the model is exactly true in the population,) this statistic is asymptotically chi-square distributed. However, under the alternative hypothesis (i.e., lack of fit), it has a non-central chi-square distribution when N is large [@cai2023incremental]. For this test, we conclude that the model adequately fits the data when the corresponding **p**-value was > 0.05.
+Absolute model fit was assessed using the **M2** statistic [@maydeu2005limited], a limited-information model fit statistic that evaluate the fit between the first and second order marginal residuals of the IRT models. Under the null hypothesis (i.e., the model is exactly true in the population,) this statistic is asymptotically chi-square distributed. However, under the alternative hypothesis (i.e., lack of fit), it has a non-central chi-square distribution when N is large [@cai2023incremental]. For this test, we conclude that the model adequately fits the data when the corresponding **p**-value was \> 0.05.
 
 Relative model fit was assessed using likelihood ratio tests (−2ΔLL). This is a statistical significance test to compare nested models, as the case is for the 1PL, 2PL and 3PL models. The −2ΔLL test consists of subtracting the maximized log-likelihood of the more complex model from that of the simpler model, multiplying such difference by -2 and comparing it to a $χ^2$ distribution with degrees of freedom equal to the difference in parameters between models to determine its significance. For instance, after checking that the 3PL and 2PL models demonstrate adequate absolute fit, we can use the −2ΔLL test to evaluate whether constraining some item parameters in the 2PL model fits the data better than estimating additional item parameters in the 3PL model.
 
@@ -95,12 +98,11 @@ Relative model fit was assessed using likelihood ratio tests (−2ΔLL). This is
 
 Item and test information, along with standard errors, are additional metrics for evaluating the performance of an item or test in meeting assessment goals. The item/test information represents the precision with which ability is estimated across the ability continuum. The more information we have in estimating ability at certain point, let's say between 0 and 1, the less error we have in that range of ability. Computationally, the standard error of the ability estimate is the reciprocal of the square root of the information [@baker2017basics]. Thus, the point (in terms of ability) at which information reaches its maximum usually coincides with the point at which the standard error is lowest.
 
-Test information was examined across the IRT models to ensure that the selected model is peaked around the target ability level for the M1 test. 
+Test information was examined across the IRT models to ensure that the selected model is peaked around the target ability level for the M1 test.
 
 # Results
 
-Comparison of model results (information, factor scores, SE)
-Comparison of forms based on Rasch and 2PL models (information, expected true scores)
+Comparison of model results (information, factor scores, SE) Comparison of forms based on Rasch and 2PL models (information, expected true scores)
 
 # Discussion
 
@@ -110,5 +112,6 @@ Comparison of forms based on Rasch and 2PL models (information, expected true sc
 
 The LR test for comparing the 1PL and 2PL models is more straightforward than comparing the 2PL with the 3PL model. When comparing the 1PL and 2PL models, we test the null hypothesis that all discrimination parameters are equal to the estimated discrimination value against an alternative hypothesis that at least one discrimination parameter differs from this value. This type of comparison in LR is typical and can be easily tested with the anova function in the mirt R package, as the $\chi^2$ reference distribution holds. However, when comparing the 2PL and 3PL models, the null hypothesis states that the guessing parameter is equal to zero for all items, against an alternative hypothesis that at least one guessing parameter is not equal to zero. This null hypothesis places the guessing parameters at their boundary, and the $\chi^2$ reference distribution no longer holds [@brown2015comparing].
 
-
 Comparing the 2PL model to the 1PL model was straightforward. In order to appropriately compare the 2PL and 3PL models, we followed the alternative approach outlined by @brown2015comparing. This involves conducting an item-level model comparison, comparing a model where the 2PL is specified for all items to models where the 3PL is specified for one item at a time. This approach results in as many LR tests as there are items in the test, leading to a final model where some items follow a 2PL model while others follow a 3PL model.
+
+# References
