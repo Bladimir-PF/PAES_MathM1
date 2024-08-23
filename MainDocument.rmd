@@ -78,8 +78,8 @@ Item and test information, along with the standard errors, were analyzed as addi
 
 ## Performance of M1 forms
 
-
-
+Figure x. Test information for M1 forms
+Figure x. Expected true scores for M1 forms
 
 Comparison of model results (information, factor scores, SE) Comparison of forms based on Rasch and 2PL models (information, expected true scores)
 
